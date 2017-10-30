@@ -156,3 +156,17 @@ body {
   padding: 5px;
   margin: 0;
 }
+
+#search {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.icon-input > input {
+  padding: 5px;
+}
+
+.icon-input > .fa {
+  margin-left: -25px;
+}
