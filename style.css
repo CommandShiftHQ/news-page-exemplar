@@ -18,10 +18,18 @@ body {
 
 #header {
   height: 50px;
-  background-color: #487ce0;
+  background-color: #2b67db;
   padding: 0 30px;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    height: unset;
+    padding: 15px 30px;
+  }
 }
 
 .logo {
@@ -32,6 +40,12 @@ body {
 
 #navigation {
   padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+  #navigation {
+    padding: 15px 30px;
+  }
 }
 
 #navigation > ul {
@@ -55,8 +69,8 @@ body {
   font-weight: bold;
 }
 
-#navigation > ul > li > a:hover {
-  background-color: #2b67db;
+#navigation > ul > li > a:hover, #navigation > ul > li > a:focus {
+  background-color: #2158c3;
 }
 
 #main {
@@ -66,7 +80,7 @@ body {
 }
 
 #headline {
-  border-left: 10px solid #497be0;
+  border-left: 10px solid #2b67db;
   padding-left: 20px;
   margin-bottom: 15px;
 }
@@ -88,9 +102,22 @@ body {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  #content {
+    flex-direction: column;
+  }
+}
+
 #content > #article {
   width: 75%;
   padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+  #content > #article {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 
 #content > #ads {
@@ -99,13 +126,22 @@ body {
   border-left: 1px solid #eee;
 }
 
+@media (max-width: 768px) {
+  #content > #ads {
+    border-left: 0;
+    border-top: 1px solid #eee;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
 .blurb {
-  color: #cbcbcb;
+  color: #767676;
   line-height: 1.5;
 }
 
 .small-heading {
-  color: #cbcbcb;
+  color: #767676;
   font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
@@ -134,7 +170,7 @@ body {
 
 .ad-title > a {
   font-size: 18px;
-  color: #497be0;
+  color: #2b67db;
   font-weight: bold;
 }
 
@@ -148,13 +184,14 @@ body {
 
 #mailing-list-buttons {
   overflow: hidden;
-  padding-top: 15px;
+  padding-top: 32px;
 }
 
 #mailing-list-buttons > button {
-  float: right;
-  padding: 5px;
+  padding: 0 20px;
   margin: 0;
+  height: 48px;
+  margin-right: 32px;
 }
 
 #search {
@@ -169,4 +206,13 @@ body {
 
 .icon-input > .fa {
   margin-left: -25px;
+}
+
+#skip-nav-link {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  color: #020202;
+  margin: 3px;
+  display: block;
 }
